@@ -10,9 +10,13 @@ terraform {
 # Configure the GitHub Provider
 
 
-provider "github" {
+#provider "github" {
     #token = "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"
-    my_secret = var.my_secret
+    #my_secret = var.my_secret
+#}
+
+resource "example_resource" "example" {
+  my_secret = var.my_secret
 }
 
 variable "my_secret" {}
