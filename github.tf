@@ -19,7 +19,7 @@ resource "example_resource" "example" {
   my_secret = var.my_secret
 }
 
-variable "my_secret" {}
+#variable "my_secret" {}
 
 resource "github_repository" "example" {
   name        = "githubfworkflow"
