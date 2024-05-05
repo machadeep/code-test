@@ -24,6 +24,7 @@ terraform {
 
 variable "my_secret" {}
 
+
 variable "terraform_aws_lambda_dead_letter_target_arn" {
   default = ""
 }
