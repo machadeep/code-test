@@ -15,8 +15,10 @@ provider "github" {
     my_secret = var.my_secret
 }
 
+variable "my_secret" {}
+
 resource "github_repository" "example" {
-  name        = "code-test"
+  name        = "githubfworkflow"
   description = "test-for-project"
 
   visibility = "public"
