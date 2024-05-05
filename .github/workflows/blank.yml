@@ -1,14 +1,12 @@
-name: Example Workflow
-
-on:
-  push:
-    branches:
-      - main
-
 jobs:
-  example_job:
+  my_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Use the secret token
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+      - name: Terraform apply
         run: |
-          echo "My token is ${{ secrets.GITHUBTOKEN }}"
+          terraform init
+          terraform apply -auto-approve -var="my_secret=${{ secrets.GITHUBTOKEN }}"
